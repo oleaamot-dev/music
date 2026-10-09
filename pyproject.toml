@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "garagejam"
+version = "2.0.0"
+description = "Multitrack music studio for GNOME (GTK 4, libadwaita, GStreamer)"
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [{ name = "Ole Kristian Aamot", email = "ole.aamot@aamotinnovation.com" }]
+# PyGObject, pycairo, GTK 4, libadwaita, GStreamer and GES come from the
+# distribution (see README) so they match the system libraries.
+dependencies = []
+
+[project.urls]
+Homepage = "https://www.garagejam.org"
+
+[project.gui-scripts]
+garagejam = "garagejam.app:main"
+
+[tool.setuptools]
+packages = ["garagejam"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
