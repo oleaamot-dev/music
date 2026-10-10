@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<garagejam version="8.0.1">
+  <project title="Sample Jam" rate="48000" channels="2" bpm="120.000">
+    <track name="Drums" file="drums-take1.wav" volume="1.000" pan="0.000" mute="false" solo="false"/>
+    <track name="Bass" file="bass-take1.wav" volume="0.850" pan="-0.200" mute="false" solo="false"/>
+    <track name="Guitar" file="guitar-take2.wav" volume="0.700" pan="0.350" mute="true" solo="false"/>
+  </project>
+</garagejam>

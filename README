@@ -1,0 +1,91 @@
+GarageJam 8.0.1
+===============
+
+GarageJam is a multitrack music recording studio for GNOME, written in C
+with GTK 4, libadwaita and GStreamer.
+
+  https://www.garagejam.org/
+  https://www.github.com/oleaamot-dev/music
+
+
+Using GarageJam
+---------------
+
+  * Press Record (Ctrl+R). If no track is armed, a new track is created
+    and the take is recorded into it. Existing tracks play while you
+    record, so you can overdub part by part.
+  * Arm a different track with its red button to record a new take into
+    it. Each take is kept as its own WAV file; the track points at the
+    latest one.
+  * Volume, pan, mute (M) and solo (S) work live while playing.
+  * Click a waveform to move the playhead. Ctrl+Space plays and stops;
+    pressing Stop twice returns to the start.
+  * Import Audio (Ctrl+I) adds tracks from existing files, Export
+    Mixdown (Ctrl+E) renders a 16-bit PCM stereo WAV.
+
+Takes for an unsaved jam go to ~/Music/GarageJam/Jam-<date>/. After you
+save, new takes are recorded next to the .gjxml file. Track files inside
+the project folder are stored with relative paths, so a project folder
+can be moved or copied as a whole.
+
+Headless mixdown:
+
+    garagejam --export-mixdown=myjam.gjxml --output=myjam.wav
+
+
+Building
+--------
+
+Dependencies:
+
+  * GLib >= 2.76
+  * GTK >= 4.12
+  * libadwaita >= 1.5
+  * GStreamer >= 1.20, with gst-plugins-base and gst-plugins-good
+    (audiomixer, audiopanorama, level, wavenc, autoaudiosrc/sink)
+
+Fedora:
+
+    sudo dnf install gcc make pkgconf-pkg-config gtk4-devel \
+        libadwaita-devel gstreamer1-devel gstreamer1-plugins-base \
+        gstreamer1-plugins-good
+
+Debian / Ubuntu:
+
+    sudo apt install build-essential pkg-config libgtk-4-dev \
+        libadwaita-1-dev libgstreamer1.0-dev gstreamer1.0-plugins-base \
+        gstreamer1.0-plugins-good
+
+From a release tarball:
+
+    tar xf garagejam-8.0.1.tar.xz
+    cd garagejam-8.0.1
+    ./configure --prefix=/usr
+    make
+    make check
+    sudo make install
+
+From git, run ./autogen.sh first (needs autoconf, automake and
+pkg-config's pkg.m4).
+
+On Windows 11, build and run inside WSL 2 (WSLg provides the display
+and PulseAudio audio); the Debian/Ubuntu instructions above apply.
+
+
+Known limitations
+-----------------
+
+  * Recording always starts from the beginning of the timeline.
+  * No automatic latency compensation for overdubs; if a take lands
+    late, it is the round-trip latency of your audio device.
+  * Waveforms are drawn for 16-bit PCM WAV files (all recorded takes);
+    imported files in other formats play but show a flat line.
+
+
+License
+-------
+
+GarageJam is free software, licensed under the GNU General Public
+License, version 3 or later. See COPYING.
+
+Copyright (C) 2026 Ole Kristian Aamot / Aamot Innovation

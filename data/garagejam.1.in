@@ -1,0 +1,60 @@
+.TH GARAGEJAM 1 "October 2026" "@PACKAGE_NAME@ @PACKAGE_VERSION@" "User Commands"
+.SH NAME
+garagejam \- multitrack music recording studio
+.SH SYNOPSIS
+.B garagejam
+[\fIOPTION\fR...] [\fIPROJECT.gjxml\fR...]
+.br
+.B garagejam
+\fB\-\-export\-mixdown\fR=\fIPROJECT.gjxml\fR [\fB\-\-output\fR=\fIOUT.wav\fR]
+.SH DESCRIPTION
+.B GarageJam
+records music track by track. Arm a track, press record, and play along
+with the tracks you already have. Each track has volume, pan, mute and
+solo controls that can be changed while the jam is playing, and the
+finished jam can be exported as a stereo WAV mixdown.
+.PP
+Projects are saved in the GarageJam XML format (GJXML). Recorded takes
+are 16\-bit PCM WAV files stored next to the project file.
+.SH OPTIONS
+.TP
+.BR \-x ", " \-\-export\-mixdown =\fIPROJECT.gjxml\fR
+Render the project to a WAV file without opening a window, then exit.
+.TP
+.BR \-o ", " \-\-output =\fIOUT.wav\fR
+File name for \fB\-\-export\-mixdown\fR. Defaults to
+\fIPROJECT\fR\-mixdown.wav.
+.TP
+.BR \-v ", " \-\-version
+Print the version and exit.
+.PP
+GStreamer options such as \fB\-\-gst\-debug\-level\fR are also accepted.
+.SH KEYS
+.TP
+.B Ctrl+R
+Record into the armed track (a new track is created if none is armed)
+.TP
+.B Ctrl+Space
+Play / stop
+.TP
+.B Ctrl+T
+Add track
+.TP
+.B Ctrl+I
+Import audio
+.TP
+.B Ctrl+E
+Export mixdown
+.TP
+.BR Ctrl+N ", " Ctrl+O ", " Ctrl+S ", " Ctrl+Shift+S
+New, open, save, save as
+.SH FILES
+.TP
+.I ~/Music/GarageJam/
+Default folder for takes of jams that have not been saved yet.
+.SH SEE ALSO
+.BR gst\-launch\-1.0 (1)
+.PP
+@PACKAGE_URL@
+.SH AUTHOR
+Ole Kristian Aamot <ole.aamot@aamotinnovation.com>

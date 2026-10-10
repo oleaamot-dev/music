@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 128 128">
+  <defs>
+    <linearGradient id="door" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#3d3846"/>
+      <stop offset="1" stop-color="#241f31"/>
+    </linearGradient>
+  </defs>
+  <!-- garage: roof and body -->
+  <path d="M10 50 L64 14 L118 50 L118 112 Q118 116 114 116 L14 116 Q10 116 10 112 Z" fill="#c64600"/>
+  <path d="M10 50 L64 14 L118 50 L118 56 L64 20 L10 56 Z" fill="#e66100"/>
+  <!-- door opening -->
+  <rect x="24" y="56" width="80" height="60" rx="3" fill="url(#door)"/>
+  <!-- waveform tracks -->
+  <g fill="none" stroke-linecap="round" stroke-width="4">
+    <path d="M32 72 h8 l4 -6 l4 12 l4 -10 l4 8 l4 -4 h36" stroke="#62a0ea"/>
+    <path d="M32 88 h12 l4 -8 l4 14 l4 -12 l4 10 l4 -4 h28" stroke="#57e389"/>
+    <path d="M32 104 h20 l4 -6 l4 10 l4 -8 l4 6 h28" stroke="#f6d32d"/>
+  </g>
+  <!-- record light -->
+  <circle cx="64" cy="38" r="7" fill="#e01b24" stroke="#fff" stroke-width="2"/>
+</svg>

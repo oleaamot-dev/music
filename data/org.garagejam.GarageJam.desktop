@@ -1,12 +1,13 @@
 [Desktop Entry]
 Name=GarageJam
-GenericName=Music Studio
-Comment=Record and arrange multitrack music
+GenericName=Multitrack Recorder
+Comment=Record and mix jam sessions track by track
 Exec=garagejam %F
-Icon=audio-input-microphone
+Icon=org.garagejam.GarageJam
 Terminal=false
 Type=Application
-Categories=AudioVideo;Audio;Recorder;Music;GTK;GNOME;
-Keywords=record;daw;multitrack;music;studio;jam;
+Categories=GNOME;GTK;AudioVideo;Audio;Recorder;Music;
+Keywords=record;multitrack;studio;mixer;music;daw;band;
 MimeType=application/x-gjxml;
 StartupNotify=true
+DBusActivatable=false

@@ -1,0 +1,18 @@
+2026-10-10  Ole Kristian Aamot  <ole.aamot@aamotinnovation.com>
+
+	* Release 8.0.0.
+
+	* configure.ac, Makefile.am, autogen.sh: GNU Autotools build with
+	dist-xz, distcheck and unit tests.
+	* src/gj-project.[ch]: Project model and GJXML reader/writer.
+	* src/gj-engine.[ch]: GStreamer playback, overdub recording and
+	WAV mixdown export with live mix updates.
+	* src/gj-waveform.[ch]: WAV peak reader and timeline widget.
+	* src/gj-window.[ch]: libadwaita main window, track rows,
+	transport, meters, file dialogs.
+	* src/main.c: AdwApplication, actions, accelerators, about dialog,
+	headless --export-mixdown.
+	* data/: desktop file, AppStream metainfo, MIME type, icons,
+	man page.
+	* tests/: GJXML and WAV peak tests.
+	* doc/gjxml.md: GarageJam XML project format.

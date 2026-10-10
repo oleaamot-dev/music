@@ -1,0 +1,28 @@
+GarageJam 8.0.1 - 2026-10-19
+============================
+
+Stable Release
+
+GarageJam 8.0.0 — 2026-10-10
+============================
+
+A new multitrack recording studio written in C with GTK 4, libadwaita
+and GStreamer, built with GNU Autotools.
+
+* Multitrack recording with overdub: arm a track, press record, and
+  play along with the existing tracks
+* Live mixer: per-track volume, pan, mute and solo, all adjustable
+  while playing
+* Waveform timeline with click-to-seek and live waveform while recording
+* Input and output peak meters
+* Import audio files of any format GStreamer can decode
+* Export a 16-bit PCM WAV mixdown, from the app or headless:
+    garagejam --export-mixdown=jam.gjxml --output=jam.wav
+* Projects saved as GarageJam XML (.gjxml), see doc/gjxml.md;
+  numbers are written locale-independently
+* Unsaved-changes prompt, keyboard shortcuts, AppStream metadata,
+  MIME type for .gjxml, man page
+* Unit tests for GJXML and the WAV peak reader (make check)
+
+Requirements: GLib 2.76, GTK 4.12, libadwaita 1.5, GStreamer 1.20 with
+the base and good plugin sets.

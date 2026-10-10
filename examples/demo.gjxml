@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<garagejam version="8.0.1">
+  <project title="Demo Jam" rate="48000" channels="2" bpm="120.000">
+    <track name="Drums" file="" volume="1.000" pan="0.000" mute="false" solo="false"/>
+    <track name="Bass" file="" volume="0.900" pan="-0.150" mute="false" solo="false"/>
+    <track name="Guitar" file="" volume="0.800" pan="0.300" mute="false" solo="false"/>
+    <track name="Vocals" file="" volume="1.000" pan="0.000" mute="false" solo="false"/>
+  </project>
+</garagejam>
